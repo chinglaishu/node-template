@@ -21,10 +21,10 @@
     "@types/passport-local": "^1.0.33",
     "@types/response-time": "^2.3.4",
     "@types/sequelize": "^4.28.9",
+    "passport-http-header-strategy": "^1.1.0",
     "ts-node": "^9.1.1",
     "tslint": "^6.1.3",
-    "typescript": "^4.1.3",
-    "passport-http-header-strategy": "^1.1.0"
+    "typescript": "^4.1.3"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

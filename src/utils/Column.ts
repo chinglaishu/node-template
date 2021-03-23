@@ -1,9 +1,7 @@
 
 const Column = {
-  User: {
-    create: ["username", "password"],
-    edit: ["username", "home"],
-    changePassword: ["password"],
+  CardGameRecord: {
+    create: ["name", "score"],
   },
 }
 

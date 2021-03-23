@@ -1,10 +1,8 @@
 import express from "express";
-import user from "./user";
-import order from "./order";
+import user from "./card-game-record";
 
 const router = express.Router();
 
-router.use("/api/user", user);
-router.use("/api/order", order);
+router.use("/api/card-game-record", user);
 
 export default router;

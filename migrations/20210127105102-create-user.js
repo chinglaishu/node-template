@@ -2,20 +2,19 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('user_table', {
-      user_id: {
+    return queryInterface.createTable('card_game_record', {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      username: {
+      name: {
         type: Sequelize.TEXT,
         allowNull: false,
-        unique: true,
       },
-      password: {
-        type: Sequelize.TEXT,
+      score: {
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       create_date: {
@@ -29,6 +28,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('user_table');
+    return queryInterface.dropTable('card_game_record');
   }
 };

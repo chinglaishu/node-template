@@ -2,34 +2,24 @@ import moment from "moment";
 import {DataTypes, Model} from "sequelize";
 import connection from "./connection";
 
-class User extends Model {
-  public user_id?: number;
-  public username?: string;
-  public password?: string;
-  public home?: any;
+class CardGameRecord extends Model {
+  public name?: number;
+  public score?: string;
 };
 
-User.init({
-  user_id: {
+CardGameRecord.init({
+  id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
   },
-  username: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-    unique: true,
-  },
-  password: {
+  name: {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  home: {
-    type: DataTypes.JSON,
-  },
-  last_edit_home: {
-    type: DataTypes.DATE,
-    defaultValue: moment(),
+  score: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
   },
   createdAt: {
     field: "create_date",
@@ -43,8 +33,8 @@ User.init({
   },
 },
 {
-  tableName: "user_table",
-  sequelize: connection,
+  tableName: "card_game_record",
+  sequelize: connection as any,
 })
 
-export default User;
+export default CardGameRecord;
